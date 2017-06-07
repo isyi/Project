@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script>
+	var count = 0;
+	function fnAppendItem(){
+	
+		count++;
+		
+		var newDiv = document.createElement("div"); 
+		//추가버튼을 누를때마다 <div></div> 메모리에 생성(트리구조에는 아직 안 들어온 상태)
+		
+		newDiv.setAttribute("id","item_" + count);
+		//<div id = "item_1"></div>과 같은 작업
+		
+		newDiv.innerHTML = "새로 추가된 아이템 ["+ count +"]&nbsp;&nbsp; <input type='button' value='삭제' onclick='fnDeleteItem("+ count +")'/>"
+		//<div id="item_1">새로 추가된 아이템<input type="button"/></div>
+		
+		var itemList = document.getElementById("itemList");
+		itemList.appendChild(newDiv);	
+	}
+	
+	function fnDeleteItem(idx){
+		var item = document.getElementById("item_" + idx);
+		
+		//자기 자신의 위치에서 자신을 삭제할 수 없다 ->부모 노드로 빠져나가야 한다.
+		if(item != null){
+			item.parentNode.removeChild(item);
+		}
+		
+	}
+</script>
+</head>
+<body>
+	<input type="button" value="추가" onclick="fnAppendItem()"/>
+	<div id="itemList">
+		<nobr></nobr>
+	</div>
+</body>
+</html>

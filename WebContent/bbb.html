@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="Dashboard">
+<meta name="keyword"
+	content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+<title>DASHGUM - Bootstrap Admin Template</title>
+
+<!-- Bootstrap core CSS -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<!--external css-->
+<link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+
+<!-- Custom styles for this template -->
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/style-responsive.css" rel="stylesheet">
+
+<script src="assets/js/chart-master/Chart.js"></script>
+<script src="assets/js/search.js"></script>
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<h2>검색</h2>
+	
+<div class="container col-md-12">
+ 	<div style="border: 1px solid black">
+		<h4>
+			<span class="label label-default">구 분</span>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="#">전체</a>&nbsp;&nbsp;
+				<a href="#">포트폴리오</a>&nbsp;&nbsp;
+				<a href="#">인물</a> &nbsp;&nbsp;
+				<a href="#">프로젝트</a> 
+				<br><br>
+					
+			<span class="label label-default">정 렬</span>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="#">최신순</a>&nbsp;&nbsp;
+				<a href="#">인기순</a>&nbsp;&nbsp;
+				<a href="#">랜덤</a> 
+				<br><br>
+					
+			<span class="label label-default">언 어</span>&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="button" value="java" onclick="fnAppendItem()"/>
+				<input type="button" value="c" onclick="fnAppendItem()"/>
+				<input type="button" value="c++" onclick="fnAppendItem()"/>
+				<input type="button" value="c#" onclick="fnAppendItem()"/>
+				<input type="button" value="jsp" onclick="fnAppendItem()"/>
+				<input type="button" value="servlet" onclick="fnAppendItem()"/>
+				<input type="button" value="spring" onclick="fnAppendItem()"/>
+				<input type="button" value="android" onclick="fnAppendItem()"/>
+				<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="text" id="language" placeholder="그 밖의 언어" onchange="fnAppendItem2()" /> 
+	
+				<br>
+				<hr>
+			
+				<div id="itemList"><div class="col-md-12"></div></div>
+		
+			</h4>
+	</div>		
+</div>
+</body>
+</html>
